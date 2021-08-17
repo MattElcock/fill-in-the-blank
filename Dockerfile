@@ -1,5 +1,6 @@
 FROM node:14-alpine AS development
 ENV NODE_ENV development
+ENV SKIP_PREFLIGHT_CHECK=true
 # Add a work directory
 WORKDIR /app
 # Cache and Install dependencies

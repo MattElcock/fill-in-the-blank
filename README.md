@@ -19,6 +19,10 @@ After running this, you can use the following command to serve the image.\
 `docker run -p 80:80 --name react-app app-prod`\
 Open [http://localhost:80](http://localhost:80) to view it in the browser.
 
+### `yarn storybook`
+
+Boots up the design system and component library.
+
 ### `yarn start`
 
 Runs the app in the development mode.\
