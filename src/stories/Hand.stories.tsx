@@ -12,6 +12,7 @@ const Template: ComponentStory<typeof Hand> = (args) => <Hand {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
+  interactable: true,
   cards: [
     {
       id: "1",
@@ -38,11 +39,6 @@ Primary.args = {
     {
       id: "7",
       text: "Nunc nulla dui, venenatis eget metus in, dictum volutpat velit. ",
-    },
-    { id: "8", text: "Nulla vitae enim ut augue consectetur fermentum." },
-    {
-      id: "9",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
   ],
   onPlayCard: (card) => alert(`You chose card: ${card.text}`),

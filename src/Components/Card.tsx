@@ -6,8 +6,8 @@ import styled from "styled-components";
 import theme from "../utils/theme";
 
 const StyledBootstrapCard = styled(BootstrapCard)`
-  width: 10em;
-  height: 13em;
+  width: 12em;
+  height: 14em;
   float: unset;
   margin: 0 auto;
 

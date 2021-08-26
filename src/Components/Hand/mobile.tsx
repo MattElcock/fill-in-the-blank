@@ -8,12 +8,34 @@ import Col from "react-bootstrap/Col";
 import BootstrapCarousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 
-import Card, { CardInterface } from "./Card";
+import { HandProps } from ".";
+
+import Card, { CardInterface } from "../Card";
+import { mobileMaxViewport, tabletMaxViewport } from "../../utils/constants";
 
 const StyledBootstrapCarousel = styled(BootstrapCarousel)`
   margin-bottom: 3em;
+
   .carousel-indicators {
     bottom: -3em;
+  }
+
+  @media only screen and (max-width: ${tabletMaxViewport}px) {
+    .carousel-control-next {
+      right: 9em;
+    }
+    .carousel-control-prev {
+      left: 9em;
+    }
+  }
+
+  @media only screen and (max-width: ${mobileMaxViewport}px) {
+    .carousel-control-next {
+      right: 0;
+    }
+    .carousel-control-prev {
+      left: 0;
+    }
   }
 `;
 
@@ -22,13 +44,7 @@ const ColCentered = styled(Col)`
   justify-content: center;
 `;
 
-type HandProps = {
-  cards: CardInterface[];
-  interactable?: boolean;
-  onPlayCard: (card: CardInterface) => void;
-};
-
-const Hand = ({ interactable, cards, onPlayCard }: HandProps) => {
+const MobileHand = ({ interactable, cards, onPlayCard }: HandProps) => {
   const [selectedCard, setSelectedCard] = useState<CardInterface | null>(null);
   const [index, setIndex] = useState<number>(0);
 
@@ -94,4 +110,4 @@ const Hand = ({ interactable, cards, onPlayCard }: HandProps) => {
   );
 };
 
-export default Hand;
+export default MobileHand;
