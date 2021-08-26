@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { tabletMaxViewport } from "../../utils/constants";
 
-import { CardInterface } from "../Card";
+import { CardInterface } from "../card";
 
 import MobileHand from "./mobile";
 import DesktopHand from "./desktop";

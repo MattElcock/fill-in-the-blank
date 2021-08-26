@@ -10,7 +10,7 @@ import Button from "react-bootstrap/Button";
 
 import { HandProps } from ".";
 
-import Card, { CardInterface } from "../Card";
+import Card, { CardInterface } from "../card";
 import { mobileMaxViewport, tabletMaxViewport } from "../../utils/constants";
 
 const StyledBootstrapCarousel = styled(BootstrapCarousel)`
